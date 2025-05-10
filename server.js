@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
@@ -7,24 +6,24 @@ const connectDB = require('./db/connect');
 const app = express();
 const port = process.env.PORT || 8080;
 
-// Conectar a la base de datos
+// Connected data base
 connectDB();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Importar rutas
+// Import Routes
 const contactsRoutes = require('./routes/contacts');
 
-// Usar rutas
+// Use Routes
 app.get('/', (req, res) => {
-  res.send('API de Contactos');
+  res.send('Contacts API');
 });
 app.use('/contacts', contactsRoutes);
 
-// Iniciar el servidor
+// Start the server
 app.listen(port, () => {
-  console.log(`Servidor corriendo en http://localhost:${port}`);
+  console.log(`Server running in http://localhost:${port}`);
 });
 

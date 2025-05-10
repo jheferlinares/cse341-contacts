@@ -1,4 +1,3 @@
-// models/contact.js
 const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema({
@@ -8,7 +7,7 @@ const contactSchema = new mongoose.Schema({
   favoriteColor: String,
   birthday: Date
 }, { 
-  collection: 'contacts' // Forzar el uso de esta colección específica
+  collection: 'contacts'
 });
 
 module.exports = mongoose.model('Contact', contactSchema);

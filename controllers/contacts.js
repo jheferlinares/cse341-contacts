@@ -1,7 +1,6 @@
-// controllers/contacts.js
 const Contact = require('../models/contact');
 
-// Obtener todos los contactos
+// All contacts
 const getAllContacts = async (req, res) => {
   try {
     const contacts = await Contact.find();
@@ -11,13 +10,13 @@ const getAllContacts = async (req, res) => {
   }
 };
 
-// Obtener un contacto por ID
+// ID each contact
 const getContactById = async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.id);
     
     if (!contact) {
-      return res.status(404).json({ message: 'Contacto no encontrado' });
+      return res.status(404).json({ message: 'Contact Not Found' });
     }
     
     res.status(200).json(contact);
