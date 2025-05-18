@@ -23,7 +23,7 @@ const swaggerOptions = {
     servers: [
       {
         url: process.env.NODE_ENV === 'production' 
-          ? 'https://your-render-app-name.onrender.com' 
+          ? 'https://cse341-contacts-zoc0.onrender.com' 
           : `http://localhost:${port}`,
         description: process.env.NODE_ENV === 'production' ? 'Production server' : 'Development server',
       },
