@@ -1,5 +1,35 @@
-### GET CONTACTS
+### Get all contacts
 GET http://localhost:8080/contacts
 
-### GET A CONTACT BY ID
+### Get contact by ID (reemplaza el ID con uno válido de tu base de datos)
 GET http://localhost:8080/contacts/681f983a162b41ff9f184c07
+
+### Create new contact
+POST http://localhost:8080/contacts
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1990-01-01"
+}
+
+### Update contact (reemplaza el ID con uno válido de tu base de datos)
+PUT http://localhost:8080/contacts/
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.updated@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1990-01-01"
+}
+
+### Delete contact (reemplaza el ID con uno válido de tu base de datos)
+DELETE http://localhost:8080/contacts/
+
+
+
